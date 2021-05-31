@@ -30,7 +30,7 @@ class Component {
         })
     }
 
-    static apply(derivedClass) {
+    static applyComponent(derivedClass) {
         $(function () {
             $(derivedClass.selector).each((index, element) => {
                 new derivedClass($(element))

@@ -8,4 +8,4 @@ class HelloWorldComponent extends Component {
         return '.HelloWorldComponent'
     }
 }
-HelloWorldComponent.apply(HelloWorldComponent)
+HelloWorldComponent.applyComponent(HelloWorldComponent)

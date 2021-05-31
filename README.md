@@ -11,19 +11,26 @@ npm install -g sass
 Install the extenxion from the Visual Studio Code Marketplace. 
 Put this in VSCode's settings.json file, omitting the first line on non-windows systems:
 "filewatcher.shell": "C:\\Program Files\\Git\\bin\\bash.exe",
-"filewatcher.commands": [
-    {
-        "isAsync": true,
-        "notMatch": "^$",
-        "match": ".*\\.s.ss$",
-        "event": "onFileChange",
-        "cmd": "cd \"${workspaceRoot}\"; sass \"${file}\" \"compiledCSS\\${fileBasenameNoExt}.css\"",
-    },
-    {
-        "isAsync": true,
-        "notMatch": "^$",
-        "match": ".*\\..sx$",
-        "event": "onFileChange",
-        "cmd": "cd \"${workspaceRoot}\"; npx babel components --out-dir compiledJS"
-    }
-]
+    "filewatcher.commands": [
+        {
+            "isAsync": true,
+            "notMatch": "^$",
+            "match": ".*\\.s.ss$",
+            "event": "onFileChange",
+            "cmd": "cd \"${workspaceRoot}\"; sass \"${file}\" \"compiled\\${fileBasenameNoExt}.css\"",
+        },
+        {
+            "isAsync": true,
+            "notMatch": "^$",
+            "match": ".*\\.[j|t]sx$",
+            "event": "onFileChange",
+            "cmd": "cd \"${workspaceRoot}\"; npx babel components --extensions \".tsx\" > \"compiled\\components.js\"; npx babel components >> \"compiled\\components.js\""
+        },
+        {
+            "isAsync": true,
+            "notMatch": "^$",
+            "match": ".*\\.ts$",
+            "event": "onFileChange",
+            "cmd": "cd \"${workspaceRoot}\"; npx tsc"
+        }
+    ],
