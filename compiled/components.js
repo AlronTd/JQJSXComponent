@@ -13,7 +13,7 @@ class TestComponent extends Component {
 
 }
 
-Component.applyComponent(TestComponent);
+applyComponent(TestComponent);
 
 class HelloWorldComponent extends Component {
   constructor(rootElement) {
@@ -26,5 +26,5 @@ class HelloWorldComponent extends Component {
 
 }
 
-HelloWorldComponent.applyComponent(HelloWorldComponent);
+applyComponent(HelloWorldComponent);
 

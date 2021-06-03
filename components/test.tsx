@@ -13,4 +13,4 @@ class TestComponent extends Component {
         return '.TestComponent'
     }
 }
-Component.applyComponent(TestComponent)
+applyComponent(TestComponent)

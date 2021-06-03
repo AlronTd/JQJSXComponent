@@ -29,12 +29,12 @@ class Component {
             this.element = value
         })
     }
+}
 
-    static applyComponent(derivedClass) {
-        $(function () {
-            $(derivedClass.selector).each((index, element) => {
-                new derivedClass($(element))
-            })
+function applyComponent(derivedClass) {
+    $(function () {
+        $(derivedClass.selector).each((index, element) => {
+            new derivedClass($(element))
         })
-    }
+    })
 }
