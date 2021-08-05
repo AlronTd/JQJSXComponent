@@ -8,7 +8,7 @@ npm install
 Install sass compiler:
 npm install -g sass
 
-Install the extenxion from the Visual Studio Code Marketplace. 
+Install the extension from the Visual Studio Code Marketplace. 
 Put this in VSCode's settings.json file, omitting the first line on non-windows systems:
 "filewatcher.shell": "C:\\Program Files\\Git\\bin\\bash.exe",
     "filewatcher.commands": [
